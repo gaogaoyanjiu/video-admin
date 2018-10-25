@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/video-admin-mapper/imooc-video-admin-mapper.iml" filepath="$PROJECT_DIR$/video-admin-mapper/imooc-video-admin-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin.iml" filepath="$PROJECT_DIR$/video-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin-common/video-admin-common.iml" filepath="$PROJECT_DIR$/video-admin-common/video-admin-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin-mapper/video-admin-mapper.iml" filepath="$PROJECT_DIR$/video-admin-mapper/video-admin-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin-mng/video-admin-mng.iml" filepath="$PROJECT_DIR$/video-admin-mng/video-admin-mng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin-pojo/video-admin-pojo.iml" filepath="$PROJECT_DIR$/video-admin-pojo/video-admin-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/video-admin-service/video-admin-service.iml" filepath="$PROJECT_DIR$/video-admin-service/video-admin-service.iml" />
+    </modules>
+  </component>
+</project>

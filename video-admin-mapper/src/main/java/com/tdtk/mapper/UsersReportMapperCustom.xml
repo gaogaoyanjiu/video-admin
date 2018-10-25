@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tdtk.mapper.UsersReportMapperCustom" >
+
+	<!--查询举报信息-->
+	<select id="selectAllVideoReport" resultType="com.tdtk.pojo.vo.Reports" >
+	  select
+	    	ur.id as id,
+	    	ur.title as title,
+	    	ur.content as content,
+	    	ur.create_date as createDate,
+        ur.is_del as isdel,
+	    	du.username as dealUsername,
+	    	v.id as dealVideoId,
+	    	v.video_desc as videoDesc,
+	    	v.video_path as videoPath,
+	    	v.status as status,
+	    	u.username as submitUsername
+	 	from users_report ur
+		 	left join users du on ur.deal_user_id = du.id
+		 	left join videos v on ur.deal_video_id = v.id
+			left join users u on ur.userid=u.id
+			where ur.is_del is null or ur.is_del='0'
+		group by ur.create_date desc
+	</select>
+
+
+
+   <!--删除举报视频-->
+	<update id="delVideoReport" parameterType="com.tdtk.pojo.UsersReport" >
+	update users_report
+	<set >
+		<if test="isdel != null" >
+			is_del = 1
+		</if>
+	</set>
+	where deal_video_id = #{dealVideoId,jdbcType=VARCHAR}
+	</update>
+</mapper>
